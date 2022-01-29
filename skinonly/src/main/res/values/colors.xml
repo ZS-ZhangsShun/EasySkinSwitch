@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FF1186FC</color>
+    <color name="purple_500">#FF1100EE</color>
+    <color name="purple_700">#FF9700B3</color>
+    <color name="teal_200">#FFffDAC5</color>
+    <color name="teal_700">#FFff8786</color>
+    <color name="black">#FFf0f0f0</color>
+    <color name="white">#FFFFF000</color>
+    <color name="status_bar">#FF0000FF</color>
+    <color name="home_tab_press">#8b00ff</color>
+    <color name="home_tab_normal">#ff6464</color>
+    <color name="home_refresh_color">#ff73da</color>
+    <color name="red">#ffff00</color>
+    <color name="chi">#ff0000</color>
+    <color name="cheng">#ff7f00</color>
+    <color name="huang">#ffff00</color>
+    <color name="lv">#00ff00</color>
+    <color name="qing">#00ffff</color>
+    <color name="lan">#0000ff</color>
+    <color name="zi">#8b00ff</color>
+</resources>

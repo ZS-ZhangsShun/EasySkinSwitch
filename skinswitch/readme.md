@@ -1,0 +1,26 @@
+插件化换肤核心思路：
+1、通过系统预留的用于创建view的Factory来接管view的创建，接管的目的：1是创建出view后对其进行相关颜色、背景的属性的设置，从而完成换肤操，2是把需要换肤的view缓存起来
+用户动态的触发换肤时，直接对这些view进行换肤操作。
+说明：所有的view都会通过LayoutInflater类来完成创建，而在创建之前系统会先判断是否有预设的工厂，如果有则会先通过工厂来创建，详见其tryCreateView方法
+
+2、因为每一个Activity都需要一个Factory来接管view的创建工作，因此我们可以利用系统的ActivityLifecycleCallbacks机制来对Activity统一添加Factory。
+说明：在ActivityLifecycleCallbacks的onActivityCreated中执行Factory的设置工作，刚好能赶在Activity的setContentView方法前面，
+因为setContentView方法最终会调到LayoutInflater里面去创建view，所以我们这样操作不耽误当前页面的换肤工作。
+
+3、对于加载我们自己皮肤包资源这一块，要利用pms来解析我们的皮肤包（.apk文件）得到资源相关信息，然后利用系统AssetManager去加载资源
+注意：加载资源需要先将我们的皮肤包路径添加到系统中，建议调用AssetManager的addAssetPathInternal方法（基于android 30），因为此方法是私有的，需要通过反射来调用
+
+4、皮肤包中的所有资源名称和宿主app包中的资源名称是完全一致的，例如主页背景颜色都叫R.color.home_bg_color,只不过对应的值不一样例如一个是#ff00ff 一个是 0000ff
+在加载资源时我们可以通过宿主app的资源id 得到资源名称和类型（resources.getResourceEntryName()、resources.getResourceTypeName()），然后在通过名称和类型找到皮肤包中对应资源id
+（resources.getIdentifier()）
+
+5、处理支持库或者自定义view的换肤，实现方案：对于支持库或三方的view通过自定义view去继承这些view，例如我们写一个SkinTabLayout 去 继承 com.google.android.material.tabs.TabLayout
+然后在SkinTabLayout内部写具体的换肤逻辑即可。
+
+6、状态栏颜色需要单独处理，方案：
+状态栏的颜色单独定义到colors.xml文件中，换肤时，单独调用一下状态栏的颜色设置即可（找到皮肤包里的颜色值）
+
+7、代码动态设置颜色的地方，如果想要支持换肤，则要单独处理
+
+待验证：10.0手机
+
