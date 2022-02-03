@@ -5,6 +5,14 @@
     2、兼容Android9.0以上版本
     3、详细介绍参考博客：https://blog.csdn.net/u013347784/article/details/122713344
 
+### 效果图
+![image](https://github.com/ZS-ZhangsShun/EasySkinSwitch/blob/master/app/img/demo1.png)
+![image](https://github.com/ZS-ZhangsShun/EasySkinSwitch/blob/master/app/img/demo2.png)
+![image](https://github.com/ZS-ZhangsShun/EasySkinSwitch/blob/master/app/img/demo3.png)
+![image](https://github.com/ZS-ZhangsShun/EasySkinSwitch/blob/master/app/img/demo4.png)
+![image](https://github.com/ZS-ZhangsShun/EasySkinSwitch/blob/master/app/img/demo5.png)
+![image](https://github.com/ZS-ZhangsShun/EasySkinSwitch/blob/master/app/img/demo6.png)
+
 ## 使用方法（可参考app工程）
 
 ### 第一步：在project的build.gradle 文件中添加JitPack依赖
