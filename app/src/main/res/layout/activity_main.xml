@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/activity_main_fl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <RelativeLayout
+            android:id="@+id/activity_main_home_rl"
+            style="@style/home_tab_rl"
+            android:background="@color/white">
+
+            <LinearLayout style="@style/home_tab_ll">
+
+                <ImageView
+                    android:id="@+id/activity_main_home_iv"
+                    style="@style/home_tab_iv"/>
+
+                <TextView
+                    android:id="@+id/activity_main_home_tv"
+                    style="@style/home_tab_tv"
+                    android:text="首页" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/activity_main_news_rl"
+            style="@style/home_tab_rl"
+            android:background="@color/white">
+
+            <LinearLayout style="@style/home_tab_ll">
+
+                <ImageView
+                    android:id="@+id/activity_main_news_iv"
+                    style="@style/home_tab_iv" />
+
+                <TextView
+                    android:id="@+id/activity_main_news_tv"
+                    style="@style/home_tab_tv"
+                    android:text="信息公开" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/activity_main_mine_rl"
+            style="@style/home_tab_rl"
+            android:background="@color/white">
+
+            <LinearLayout style="@style/home_tab_ll">
+
+                <ImageView
+                    android:id="@+id/activity_main_mine_iv"
+                    style="@style/home_tab_iv" />
+
+                <TextView
+                    android:id="@+id/activity_main_mine_tv"
+                    style="@style/home_tab_tv"
+                    android:text="我的" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>
