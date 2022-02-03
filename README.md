@@ -82,9 +82,9 @@
             ResourcesManager.getDrawable(xxx)
         b.当前所在的Activity实现SkinViewSupportInter接口，实现接口中的applySkin方法，当触发换肤时,回进行回调
         请参考app工程中MainActivity的实现方式
-        ![](https://github.com/ZS-ZhangsShun/EasySkinSwitch/blob/master/app/img/ResourcesManager.png)
-        ![](https://github.com/ZS-ZhangsShun/EasySkinSwitch/blob/master/app/img/MainActivity.png)
-        ![](https://github.com/ZS-ZhangsShun/EasySkinSwitch/blob/master/app/img/MainActivity_applySkin.png)
+![image](https://github.com/ZS-ZhangsShun/EasySkinSwitch/blob/master/app/img/ResourcesManager.png)
+![image](https://github.com/ZS-ZhangsShun/EasySkinSwitch/blob/master/app/img/MainActivity.png)
+![image](https://github.com/ZS-ZhangsShun/EasySkinSwitch/blob/master/app/img/MainActivity_applySkin.png)
 #### （5）需要换肤时调用SkinManager.loadSkin(皮肤包绝对路径)来换肤，如app工程NewsFragment所示：
         //换肤
         SkinManager.loadSkin(EasyVariable.mContext.cacheDir.absolutePath
