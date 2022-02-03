@@ -74,6 +74,17 @@ class MainActivity : BaseActivity(), View.OnClickListener, SkinViewSupportInter 
         }
     }
 
+    private fun resetTabStatus() {
+        activity_main_home_iv.background = (ResourcesManager.getDrawable(R.drawable.home))
+        activity_main_home_tv.setTextColor(ResourcesManager.getColor(R.color.home_tab_normal))
+
+        activity_main_news_iv.background = (ResourcesManager.getDrawable(R.drawable.news))
+        activity_main_news_tv.setTextColor(ResourcesManager.getColor(R.color.home_tab_normal))
+
+        activity_main_mine_iv.background = (ResourcesManager.getDrawable(R.drawable.mine))
+        activity_main_mine_tv.setTextColor(ResourcesManager.getColor(R.color.home_tab_normal))
+    }
+
     private fun updateTabUI() {
         resetTabStatus()
         if (curTabSelectIndex == 0) {
@@ -86,17 +97,6 @@ class MainActivity : BaseActivity(), View.OnClickListener, SkinViewSupportInter 
             activity_main_mine_iv.background = (ResourcesManager.getDrawable(R.drawable.mine_pre))
             activity_main_mine_tv.setTextColor(ResourcesManager.getColor(R.color.home_tab_press))
         }
-    }
-
-    private fun resetTabStatus() {
-        activity_main_home_iv.background = (ResourcesManager.getDrawable(R.drawable.home))
-        activity_main_home_tv.setTextColor(ResourcesManager.getColor(R.color.home_tab_normal))
-
-        activity_main_news_iv.background = (ResourcesManager.getDrawable(R.drawable.news))
-        activity_main_news_tv.setTextColor(ResourcesManager.getColor(R.color.home_tab_normal))
-
-        activity_main_mine_iv.background = (ResourcesManager.getDrawable(R.drawable.mine))
-        activity_main_mine_tv.setTextColor(ResourcesManager.getColor(R.color.home_tab_normal))
     }
 
     override fun applySkin() {

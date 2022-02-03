@@ -78,7 +78,10 @@
 #### （4）代码中动态设置颜色、背景等皮肤相关的地方要单独进行处理
         例如，app工程中我们主页底部tab的图标和颜色都是根据用户点击来动态设置的，这里可以这样处理
         a.设置Tab的颜色和图标时用使用库中封装好的ResourcesManager来获取资源id对应的值
-        
+            ResourcesManager.getColor(xxx)
+            ResourcesManager.getDrawable(xxx)
+        b.当前所在的Activity实现SkinViewSupportInter接口，实现接口中的applySkin方法，当触发换肤时,回进行回调
+        请参考app工程中MainActivity的实现方式
 
 ## 混淆配置
--keep class com.zs.easy.imgcompress.** {*;}
+-keep com.zs.skinswitch.** {*;}
