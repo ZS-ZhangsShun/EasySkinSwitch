@@ -85,6 +85,7 @@
             ResourcesManager.getDrawable(xxx)
         b.当前所在的Activity实现SkinViewSupportInter接口，实现接口中的applySkin方法，当触发换肤时,回进行回调
         请参考app工程中MainActivity的实现方式
+![image](https://github.com/ZS-ZhangsShun/EasySkinSwitch/blob/master/app/img/MainActivity_tab.png)
 ![image](https://github.com/ZS-ZhangsShun/EasySkinSwitch/blob/master/app/img/ResourcesManager.png)
 ![image](https://github.com/ZS-ZhangsShun/EasySkinSwitch/blob/master/app/img/MainActivity.png)
 ![image](https://github.com/ZS-ZhangsShun/EasySkinSwitch/blob/master/app/img/MainActivity_applySkin.png)
