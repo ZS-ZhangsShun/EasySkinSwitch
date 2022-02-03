@@ -58,6 +58,7 @@ dependencies {
     implementation 'me.jessyan:autosize:1.2.1'
     implementation "com.github.ZS-ZhangsShun:EasyCommonUtils:${cfgs.easyCommonUtils}"
     implementation "io.github.youth5201314:banner:${cfgs.banner}"
-    implementation project(path: ':skinswitch')
+//    implementation project(path: ':skinswitch')
+    implementation 'com.github.ZS-ZhangsShun:EasySkinSwitch:1.0.0'
 
 }

@@ -29,7 +29,7 @@ task clean(type: Delete) {
 
 ext {
     compileSdk = 30
-    minSdk = 21
+    minSdk = 19
     targetSdk = 30
     versionCode = 2001000
     versionName = "2.1.0"
@@ -40,8 +40,8 @@ ext {
     cfgs = [
             easyCommonUtils  : "1.7.1",
             banner  : "2.2.2",
-            compileSdkVersion: 28,
-            minSdkVersion    : 16,
-            targetSdkVersion : 28,
+            compileSdkVersion: 30,
+            minSdkVersion    : 19,
+            targetSdkVersion : 30,
     ]
 }
